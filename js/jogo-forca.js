@@ -58,7 +58,7 @@ btnAdicionarPalavra.addEventListener('click',function(){
     var btnSalvarPalavra = document.querySelector("#salvar-palavra")
     btnSalvarPalavra.addEventListener("click", function(){
 
-        if(arrayPalavras.includes(escrevePalavra.value.toUpperCase()) && !escrevePalavra.value == ""){
+        if(arrayPalavras.includes(escrevePalavra.value.toUpperCase()) || escrevePalavra.value == ""){
             alert("TENTE OUTRA PALAVRA")
         }else{
             arrayPalavras.push(escrevePalavra.value.toUpperCase())
