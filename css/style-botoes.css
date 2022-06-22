@@ -1,0 +1,112 @@
+.botoes-principais{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+
+    font-size: 24px ;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.botoes-principais:hover {
+    background-color: #3e8e41
+}
+.botoes-principais:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#adicionar-palavra{
+    width: 250px;
+}
+.botoes-add-palavra{
+    width: 105px;
+    height: 30px;
+    margin: 120px 5px 0px 0px;
+
+    font-size: 24px ;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.botoes-add-palavra:hover{
+    background-color: #3e8e41
+}
+.botoes-add-palavra:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.btn-novo-jogo{
+    width: 110px;
+    height: 30px;
+    margin: 275px 5px 0px 0px;
+
+    font-size: 20px ;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+.btn-novo-jogo:hover {
+    background-color: #3e8e41
+}
+.btn-novo-jogo:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.fileira-teclado{
+    text-align: center;
+    margin: 5px 0px 5px 5px;
+}
+.tecla-padrao{
+    font-weight: bold;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: while;
+    margin: 0px 5px 5px 0px;
+    width: 45px;
+    height: 30px;
+    border-radius: 6px;
+}
+.tecla-padrao:hover{
+    transform: scale(1.30);
+    transition: transform 550ms;
+    background-color: #3e8e41;
+    
+}
+.tecla-padrao:active{
+    background-color: #5F9EA0;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: transform 550ms;
+}
+.teclaAcionada{
+    font-weight: bold;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: #C71585;
+    color: #ffffff;
+    margin: 0px 5px 5px 0px;
+    width: 45px;
+    height: 30px;
+    border-radius: 6px;
+}

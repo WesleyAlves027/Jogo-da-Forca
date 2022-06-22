@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jogo-forca.css">
+    <link rel="stylesheet" href="css/style-botoes.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <section>
+        <div id="layout-btn" class="div-btn-principal">
+            <button id="iniciar-jogo" class="botoes-principais" >Iniciar Jogo</button>
+            <button id="reiniciar-jogo" class="botoes-principais">Reiniciar</button>
+            <button id="parar-jogo" class="botoes-principais">Desistir</button>
+            <button id="adicionar-palavra" class="botoes-principais" >Add+ Palavra</button>
+        </div>
+        <div id="layout-add-palavra" class="invisivel">
+            <textarea id="escrever-palavra" cols="30" rows="10" placeholder="Digite uma palavra, max 8 Caracteres"></textarea>
+            <div class="div-btn-add-palavra">
+                <button id="salvar-palavra" class="botoes-add-palavra">Salvar</button>
+                <button id="cancelar-palavra" class="botoes-add-palavra">Cancelar</button>
+            </div>
+        </div>
+        <div id="div-fim-de-jogo" class="invisivel">   
+            <div id="img-fim-de-jogo">
+                <img id="img-ganhou" class="img-mensagem" src="imagens/acertou.png" alt="você ganhou">
+                <img id="img-perdeu" class="img-mensagem" src="imagens/perdeu.jpg" alt="você perdeu">
+                <span id="mensagem-fim-de-jogo"></span>
+            </div>
+            <div id="div-btn-novo-jogo">
+                <button id="novo-jogo" class="btn-novo-jogo">Novo Jogo</button>
+                <button id="home" class="btn-novo-jogo">Home</button>         
+            </div>
+        </div>
+    </section>
+    
+    <div id="container-jogo" class="invisivel">
+
+        <canvas id="tela" width="600" height="500"></canvas> 
+
+        <div class="bonecosForca">
+            <img id="boneco0" src="/Forca/imagens/parte 0.PNG" alt="Pronto para inicar o jogo">
+            <img id="boneco1" src="/Forca/imagens/parte 1.PNG" alt="Cabeça do boneco">
+            <img id="boneco2" src="/Forca/imagens/parte 2.PNG" alt="corpo do boneco">
+            <img id="boneco3" src="/Forca/imagens/parte 3.PNG" alt="braço esquerdo">
+            <img id="boneco4" src="/Forca/imagens/parte 4.PNG" alt="braço direito">
+            <img id="boneco5" src="/Forca/imagens/parte 5.PNG" alt="perna esquerda">
+            <img id="boneco6" src="/Forca/imagens/parte 6.PNG" alt="corpo completo do boneco">
+        </div>   
+        <div id="container-interacao">
+            <h1 class="titulo">Apenas essas Teclas São permitadas</h1>
+            <section id="teclado">
+                <div class="fileira-teclado">
+                    <button id="tecla-Q" class="tecla-padrao" onclick="verificaTecladoVirtual('Q')">Q</button>
+                    <button id="tecla-W" class="tecla-padrao" onclick="verificaTecladoVirtual('W')">W</button>
+                    <button id="tecla-E" class="tecla-padrao" onclick="verificaTecladoVirtual('E')">E</button>
+                    <button id="tecla-R" class="tecla-padrao" onclick="verificaTecladoVirtual('R')">R</button>
+                    <button id="tecla-T" class="tecla-padrao" onclick="verificaTecladoVirtual('T')">T</button>
+                    <button id="tecla-Y" class="tecla-padrao" onclick="verificaTecladoVirtual('Y')">Y</button>
+                    <button id="tecla-U" class="tecla-padrao" onclick="verificaTecladoVirtual('U')">U</button>
+                    <button id="tecla-I" class="tecla-padrao" onclick="verificaTecladoVirtual('I')">I</button>
+                    <button id="tecla-O" class="tecla-padrao" onclick="verificaTecladoVirtual('O')">O</button>
+                    <button id="tecla-P" class="tecla-padrao" onclick="verificaTecladoVirtual('P')">P</button>    
+                </div>
+                
+                <div class="fileira-teclado">
+                    <button id="tecla-A" class="tecla-padrao" onclick="verificaTecladoVirtual('A')">A</button>
+                    <button id="tecla-S" class="tecla-padrao" onclick="verificaTecladoVirtual('S')">S</button>
+                    <button id="tecla-D" class="tecla-padrao" onclick="verificaTecladoVirtual('D')">D</button>
+                    <button id="tecla-F" class="tecla-padrao" onclick="verificaTecladoVirtual('F')">F</button>
+                    <button id="tecla-G" class="tecla-padrao" onclick="verificaTecladoVirtual('G')">G</button>
+                    <button id="tecla-H" class="tecla-padrao" onclick="verificaTecladoVirtual('H')">H</button>
+                    <button id="tecla-J" class="tecla-padrao" onclick="verificaTecladoVirtual('J')">J</button>
+                    <button id="tecla-K" class="tecla-padrao"onclick="verificaTecladoVirtual('K')">K</button>
+                    <button id="tecla-L" class="tecla-padrao" onclick="verificaTecladoVirtual('L')">L</button>
+                </div>
+            
+                <div class="fileira-teclado">
+                    <button id="tecla-Z" class="tecla-padrao" onclick="verificaTecladoVirtual('Z')">Z</button>
+                    <button id="tecla-X" class="tecla-padrao" onclick="verificaTecladoVirtual('X')">X</button>
+                    <button id="tecla-C" class="tecla-padrao" onclick="verificaTecladoVirtual('C')">C</button>
+                    <button id="tecla-V" class="tecla-padrao" onclick="verificaTecladoVirtual('V')">V</button>
+                    <button id="tecla-B" class="tecla-padrao" onclick="verificaTecladoVirtual('B')">B</button>
+                    <button id="tecla-N" class="tecla-padrao" onclick="verificaTecladoVirtual('N')">N</button>
+                    <button id="tecla-M" class="tecla-padrao" onclick="verificaTecladoVirtual('M')">M</button>
+                </div>
+            </section>
+
+            <div class="informacoes">
+                <h2 id="vidas-restantes" class="titulo"></h2>
+                <input id="input-letras" type="text" placeholder="Letras Usadas">
+            </div>
+        </div>
+    </div>
+    <div id="div-descricao-jogo" class="invisivel">
+        <div id="descricao">
+            <h3 class="sub-titulo">Como Jogar</h3>
+            <ul id="como-jogar">
+                <li>
+                    Descubra a palavra oculta que aparece na tela.
+                </li>
+                <li>
+                    Use como referência a quantidade de tracinhos.
+                </li> 
+                <li>
+                    A cada erro uma parte do boneco é desenhado na tela.
+                </li>
+            </ul>
+            <br>
+            <h4 class="sub-titulo">Dicas e Sugestões</h4>
+            <ul id="dicas-sugestoes">
+                <li>
+                    Comece pelas vogais: a, e, i, o, u;
+                </li>
+                <li>
+                    Essas letras são muito utilazadas na lingua portuguesa também: a, e, o, s, r, i, d, m, n.
+                </li>
+            </ul>
+        </div>
+        
+        <div id="encriptador">
+            <h5 class="sub-titulo">Conheça também o Encriptador de Textos</h5>  
+            <a href="https://wesleyalves027.github.io/Decodificador/"><img id="img-encriptador" src="imagens/encriptador.png" alt="encriptador de textos"></a>
+        </div>
+    </div>
+    
+    
+    <footer id="rodape" class="footer-pagina-inicial">
+        <p class="copyright">&copy; Deselvolvido por Wesley Alves - 2022</p>
+
+        <div class="div-img-link">
+            <img id="linkedin-imagem" class="imagem-link" src="imagens/linkedin-imagem.png" alt="icone do linkedin"><a href="https://www.linkedin.com/in/wesley-alves-santana-947633206">Linkedin</a>
+            <img id="gitHub-imagem" class="imagem-link" src="imagens/gitHub-imagem.png" alt="icone do gitHub"><a href="https://github.com/WesleyAlves027?tab=repositories">gitHub</a>
+        </div>
+    </footer>
+    
+    
+    <script src="js/jogo-forca.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/event-teclado.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+body{
+    width: 960px;
+    background:#00CED1;
+    margin: 5px 2% 0 2%;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    
+}
+.invisivel{
+    display: none;
+}
+.div-btn-principal{
+    width: 960px;
+    position: absolute;
+    display: flex;
+    margin: 300px 0px 0px 450px;
+}
+.div-btn-secundario{
+    position: absolute;
+    display: flex;
+    margin: 70px 0px 0px 150px;
+}
+.div-btn-novo-jogo{
+    margin: 100px 0px 0px 410px;
+}
+.div-add-palavra{
+    position: absolute;
+    display: flex;
+    margin: 200px 0px 0px 450px;
+}
+.div-btn-add-palavra{
+    display: flex;
+    position: absolute; 
+    bottom: 20px;
+    right: 5px;
+}
+#escrever-palavra{
+    border: 2px solid black;
+    font-size: 24px;
+}
+#reiniciar-jogo{
+    display: none;
+}
+#parar-jogo{
+    display: none;
+}
+canvas{
+    background: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin:50px 0 0 0px;
+}
+#div-fim-de-jogo{
+    position:absolute;
+    width: 320px;
+    height: 320px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    top: 110px;
+    left: 450px;
+}
+#img-ganhou, #img-perdeu{
+    display: none;
+}
+.img-mensagem{
+    width: 300px;
+    height: 220px;
+    margin: 25px 0px 5px 10px;
+    
+}
+#mensagem-fim-de-jogo{
+    margin-left: 50px;
+}
+#div-btn-novo-jogo{
+    display: flex;
+    position: absolute;
+    left: 45px;
+    top: 0px;
+}
+.bonecosForca{
+    width: 100px;
+    position:absolute;
+    left: 210px;
+    top: 180px;
+}
+#boneco0,#boneco1, #boneco2, #boneco3, #boneco4, #boneco5, #boneco6{
+    display:none;
+}
+#container-interacao{
+    display:inline;
+    position: absolute;
+    vertical-align: top;
+    top: 50px;
+    left: 750px;
+
+}
+.informacoes{
+    position: absolute;
+    top: 200px;
+    left: 90px;
+}
+.titulo{
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: center;
+}
+#input-letras{
+    width: 300px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+
+    text-align: center;
+    font-size: 20px;
+
+    margin:20px 0 0 30px;
+}
+#div-descricao-jogo{
+    width: 1270px;
+    height: 190px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+#descricao{
+    display: inline-block;
+}
+#encriptador{
+    position: absolute;
+    display: inline-block;
+    margin-left: 60px;
+}
+#img-encriptador{
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#como-jogar{
+    margin: 5px 0 0 45px;
+    line-height: 20px;
+}
+#dicas-sugestoes{
+    margin: 5px 0 0 45px;
+    line-height: 20px;
+}
+ul{
+    list-style-type: circle;
+}
+.sub-titulo{
+    margin-top: 5px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+.footer-pagina-inicial{
+    display: flex;
+    position: absolute;
+    width: 960px;
+    top: 550px;
+    left: 540px;
+    text-align: center;
+}
+.rodape-jogo-iniciado{
+    display: flex;
+    position: absolute;
+    width: 960px;
+    top: 800px;
+    left: 540px;
+    text-align: center;
+}
+.imagem-link{
+    width: 25px;
+}
+.div-img-link{
+    margin-left: 300px;
+}
+a {
+    margin: 0px 40px 0px 5px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.copyright{
+    font-size: 15px;
+}
+
+
+
+
